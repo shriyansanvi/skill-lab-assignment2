@@ -1,21 +1,21 @@
 const mongoose = require('mongoose');
 
-// Create the Booking schema
+
 const bookingSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, 'Name is required.'], // Validation
+    required: [true, 'Name is required.'], 
     trim: true,
   },
   email: {
     type: String,
-    required: [true, 'Email is required.'], // Validation
+    required: [true, 'Email is required.'], 
     trim: true,
     lowercase: true,
   },
   event: {
     type: String,
-    required: [true, 'Event is required.'], // Validation
+    required: [true, 'Event is required.'], 
     trim: true,
   },
   ticketType: {
@@ -28,5 +28,5 @@ const bookingSchema = new mongoose.Schema({
   },
 });
 
-// Create and export the model
+
 module.exports = mongoose.model('Booking', bookingSchema);
